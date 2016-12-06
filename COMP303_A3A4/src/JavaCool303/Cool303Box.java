@@ -1,4 +1,7 @@
 package JavaCool303;
+
+import javax.swing.JFrame;
+
 /**
  * 
  * @author Anurag Kalra
@@ -12,6 +15,23 @@ package JavaCool303;
  * automatically initiated overriding the user’s specified size.
  * 
  */
-public class Cool303Box {
 
+public class Cool303Box extends Cool303Container{
+	private Cool303Theme theme;
+	private JFrame frame;
+	private int length;
+	private int width;
+	
+	public Cool303Box(Cool303Theme theme){
+		frame = new JFrame();
+		this.theme = theme;
+	}
+	
+	public Cool303Box(Cool303Theme theme, int length, int width){
+		frame = new JFrame();
+		this.theme = theme;
+		this.length = length;
+		this.width = width;
+	}
+	
 }

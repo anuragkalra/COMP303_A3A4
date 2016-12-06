@@ -1,4 +1,7 @@
 package JavaCool303;
+
+import javax.swing.JPanel;
+
 /**
  * 
  * @author Anurag Kalra
@@ -12,6 +15,8 @@ package JavaCool303;
  * appearing at the top left corner of the container area. 
  * 
  */
-public class Cool303Container {
-
+public class Cool303Container implements Cool303Component {
+	private JPanel panel;
+	private String label;
+	
 }

@@ -1,4 +1,7 @@
 package JavaCool303;
+
+import javax.swing.JComponent;
+
 /**
  * 
  * @author Anurag Kalra
@@ -6,6 +9,6 @@ package JavaCool303;
  * Components are individual units that are used to populate containers
  * 
  */
-public class Cool303Component {
+public interface Cool303Component{
 
 }

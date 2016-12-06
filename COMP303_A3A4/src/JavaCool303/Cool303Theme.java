@@ -1,4 +1,7 @@
 package JavaCool303;
+
+import java.awt.Color;
+
 /**
  * 
  * @author Anurag Kalra
@@ -10,6 +13,8 @@ package JavaCool303;
  * will leave it to your imagination.
  * 
  */
-public class Cool303Theme {
-
+public interface Cool303Theme {
+	public Color getColor();
+	public Color getBackgroundColor();
+	public boolean isRound();
 }
