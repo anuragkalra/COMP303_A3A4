@@ -1,5 +1,7 @@
 package JavaCool303;
 
+import java.awt.Component;
+
 import javax.swing.JFrame;
 
 /**
@@ -19,19 +21,48 @@ import javax.swing.JFrame;
 public class Cool303Box extends Cool303Container{
 	private Cool303Theme theme;
 	private JFrame frame;
-	private int length;
-	private int width;
+	private int width = 100;
+	private int height = 100;
 	
 	public Cool303Box(Cool303Theme theme){
 		frame = new JFrame();
+		frame.setSize(this.width, this.height);
+		frame.setLayout(layout);
 		this.theme = theme;
 	}
 	
-	public Cool303Box(Cool303Theme theme, int length, int width){
+	public Cool303Box(Cool303Theme theme, int width, int height){
 		frame = new JFrame();
+		frame.setSize(width, height);
+		frame.setLayout(layout);
 		this.theme = theme;
-		this.length = length;
 		this.width = width;
+		this.height = height;
+	}	
+	
+	public void add(Cool303Button b){
+		System.out.println("add1");
+		this.getFrame().add(b);
+	}
+	
+	/**
+	public Component add(Component c){
+		System.out.println("add2");
+		this.getFrame().add(c);
+		return null;
+	}
+	*/
+	
+	public void add(Cool303Container c){
+		this.getFrame().add(c);
+	}
+	
+	public JFrame getFrame(){
+		return this.frame;
+	}
+	
+	public void setVisible(boolean b){
+		frame.setVisible(b);
 	}
 	
 }

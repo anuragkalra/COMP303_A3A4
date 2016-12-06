@@ -18,7 +18,7 @@ import javax.swing.border.EtchedBorder;
 public class Cool303Tester {
 
 	public static void main(String[] args) {
-		//method2();
+		method2();
 	}
 
 	public static void method1(){
@@ -52,7 +52,34 @@ public class Cool303Tester {
 	}
 	
 	public static void method2(){
-		Cool303Box box = new Cool303Box(new Winter());
+		Cool303Box box1 = new Cool303Box(new Winter());
+		box1.getFrame().setLayout(new FlowLayout());
 		
+		Cool303Button cbutton1 = new Cool303Button(12);
+		
+		//creating button1
+		JButton button1 = new JButton("test");
+		button1.setBackground(Color.BLACK);
+		button1.setForeground(Color.CYAN);
+		
+		
+		Cool303Container container = new Cool303Container();
+		
+		Cool303Button cbutton2 = new Cool303Button(12323);
+		Cool303Button cbutton3 = new Cool303Button(333);
+		container.add(cbutton2);
+		container.add(cbutton3);
+		
+		box1.add(container);
+		
+		//adding buttons
+		//box1.add(cbutton1);
+		//box1.add(button1);
+		
+		
+		box1.getFrame().setLocationRelativeTo(null);
+		box1.getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		box1.getFrame().pack();
+		box1.setVisible(true);
 	}
 }

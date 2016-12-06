@@ -1,5 +1,9 @@
 package JavaCool303;
 
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.LayoutManager;
+
 import javax.swing.JPanel;
 
 /**
@@ -15,8 +19,25 @@ import javax.swing.JPanel;
  * appearing at the top left corner of the container area. 
  * 
  */
-public class Cool303Container implements Cool303Component {
+public class Cool303Container extends Cool303Component{ // implements Cool303Component {
 	private JPanel panel;
 	private String label;
+	protected LayoutManager layout = new BorderLayout();
 	
+	public Cool303Container(String label){
+		panel = new JPanel();
+		this.label = label;
+	}
+	
+	public Cool303Container(){
+		panel = new JPanel();
+	}
+	
+	public void add(Cool303Component c){
+		this.getPanel().add(c);
+	}
+	
+	public JPanel getPanel(){
+		return this.panel;
+	}
 }
